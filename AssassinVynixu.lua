@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
 
 local Gui = Library:AddGui({
-Title = {"Popsiclez", "Assassin"},
+Title = {"Popsiclez", "Assassin 2.1"},
 ThemeColor = Color3.fromRGB(0,90,255),
 ToggleKey = Enum.KeyCode.RightAlt,
 })
@@ -2661,8 +2661,8 @@ end)
 
 local Tab = Gui:AddTab("AutoFarm")
 local Category = Tab:AddCategory("Autofarm (Beta)")
-local Label = Category:AddLabel("Equip Knife and Use Auto Clicker Before Use")
-local Button = Category:AddButton("Start Autofarm (Beta/Glitchy", function()
+local Label = Category:AddLabel("Equip Knife and Use Auto Clicker")
+local Button = Category:AddButton("Start Autofarm (Beta/Glitchy)", function()
 
 autofarmenabled = true
 
