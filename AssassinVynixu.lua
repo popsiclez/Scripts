@@ -2659,29 +2659,21 @@ local Button = Category:AddButton("Popsiclez - Aimbot", function()
 
 end)
 
-local Tab = Gui:AddTab("Farming")
-local Category = Tab:AddCategory("Farming Options")
-local Label = Category:AddLabel("Equip Knife and Use Auto Clicker")
-local Button = Category:AddButton("Kill Random (Beta/Glitchy)", function()
+local Tab = Gui:AddTab("Kill")
+local Category = Tab:AddCategory("Killing Options")
+local Label = Category:AddLabel("You Must Manually Stab The User.")
+local Button = Category:AddButton("Kill Random", function()
+	print("Killed Random User")
+
+	
 
 	game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	wait(0.09)
         local randomPlayer = game.Players:GetPlayers()
     [math.random(1,#game.Players:GetPlayers())]
     
-	game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
-
-	wait(0.1)
-
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
-
-	wait(0.1)
-
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
-
-	wait(0.1)
-
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
 
 end)
 
