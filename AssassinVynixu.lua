@@ -2605,6 +2605,11 @@ local Button = Category:AddButton("Reset", function()
     game.Workspace.Gravity = "196.2"
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "16"
 end)
+local Button = Category:AddButton("Suicide", function()
+
+	game.Players.LocalPlayer.Character.Humanoid.Health = "0"
+
+end)
 local Button = Category:AddButton("Infinite Jump", function()
     InfiniteJumpEnabled = true
 		game:GetService("UserInputService").JumpRequest:connect(function()
