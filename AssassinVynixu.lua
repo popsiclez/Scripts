@@ -2571,6 +2571,7 @@ local Dropdown = Category:AddDropdown("Speed | Default = 16", {
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = name
 end)
 
+
 local Dropdown = Category:AddDropdown("Gravity", {
 	"Super Low",
     "Low",
@@ -2655,6 +2656,32 @@ local Button = Category:AddButton("Popsiclez - Aimbot", function()
         Title = "Popsiclez - Assassin";
         Text = "Script Link Copied."
     })
+
+end)
+
+local Tab = Gui:AddTab("AutoFarm")
+local Category = Tab:AddCategory("Autofarm (Beta)")
+local Label = Category:AddLabel("Equip Knife and Use Auto Clicker Before Use")
+local Button = Category:AddButton("Start Autofarm (Beta/Glitchy", function()
+
+autofarmenabled = false
+
+if autofarmenabled = false then
+    autofarmenabled = true
+    while autofarmenabled == true do
+        local randomPlayer = game.Players:GetPlayers()
+    [math.random(1,#game.Players:GetPlayers())]
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
+    
+    wait(1.5)
+    
+    end
+end)
+
+if autofarmenabled = true then
+    autofarmenabled = false
+end)
 
 end)
 
