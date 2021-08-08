@@ -2664,24 +2664,15 @@ local Category = Tab:AddCategory("Autofarm (Beta)")
 local Label = Category:AddLabel("Equip Knife and Use Auto Clicker Before Use")
 local Button = Category:AddButton("Start Autofarm (Beta/Glitchy", function()
 
-autofarmenabled = false
+autofarmenabled = true
 
-if autofarmenabled = false then
-    autofarmenabled = true
-    while autofarmenabled == true do
+ while autofarmenabled == true do
         local randomPlayer = game.Players:GetPlayers()
     [math.random(1,#game.Players:GetPlayers())]
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
     
-    wait(1.5)
-    
     end
-end)
-
-if autofarmenabled = true then
-    autofarmenabled = false
-end)
 
 end)
 
