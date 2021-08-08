@@ -2672,6 +2672,7 @@ autofarmenabled = true
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
     
+	wait(1)
     end
 
 end)
