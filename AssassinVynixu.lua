@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
 
 local Gui = Library:AddGui({
-Title = {"Popsiclez", "Assassin 2.1"},
+Title = {"Popsiclez", "Assassin 2.3"},
 ThemeColor = Color3.fromRGB(0,90,255),
 ToggleKey = Enum.KeyCode.RightAlt,
 })
@@ -2677,7 +2677,56 @@ local Button = Category:AddButton("Kill Random", function()
 
 end)
 
+local Button = Category:AddButton("Loop Kill Random", function()
 
+	loopingkill = true --status
+
+	while loopingkill == true do
+
+	game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	wait(0.09)
+    local randomPlayer = game.Players:GetPlayers()
+    [math.random(1,#game.Players:GetPlayers())]
+    
+	
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
+	wait(0.1)
+	end
+
+end)
+
+local Tab = Gui:AddTab("Teleports")
+local Category = Tab:AddCategory("Teleport Locations")
+local Button = Category:AddButton("Lobby", function()
+
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(2364.2, 594.748, -399.822)
+
+end)
+local Button = Category:AddButton("Paintball Arena (Map)", function()
+
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(2360.84, 603.571, -1899.71)
+
+end)
+local Button = Category:AddButton("Subway (Map)", function()
+
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(1931.99, 528.558, -1675.97)
+
+end)
+local Button = Category:AddButton("Airport (Map)", function()
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(4774.56, 1101.32, -341.588)
+end)
+local Button = Category:AddButton("Ruins (Map)", function()
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(2901.87, 622.97, -2582.74)
+end)
+local Button = Category:AddButton("Farm (Map)", function()
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(2376.26, 2426.62, -5514.06)
+end)
 
 local Tab = Gui:AddTab("Credits")
 local Category = Tab:AddCategory("Credits")
