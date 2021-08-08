@@ -2667,6 +2667,7 @@ local Button = Category:AddButton("Start Autofarm (Beta/Glitchy)", function()
 autofarmenabled = true
 
  while autofarmenabled == true do
+	game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
         local randomPlayer = game.Players:GetPlayers()
     [math.random(1,#game.Players:GetPlayers())]
     
