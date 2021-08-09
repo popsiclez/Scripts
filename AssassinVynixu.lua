@@ -12,6 +12,7 @@ local Button = Category:AddButton("Enable Softaim", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/bockatta/Atta/main/2'))()
 end)
 
+
 local Tab = Gui:AddTab("ESP")
 local Category = Tab:AddCategory("ESP Options")
 local Button = Category:AddButton("Popsiclez - ESP", function()
@@ -2733,12 +2734,16 @@ local Button = Category:AddButton("Farm (Map)", function()
 	player.Character.HumanoidRootPart.CFrame = CFrame.new(2376.26, 2426.62, -5514.06)
 end)
 local Button = Category:AddButton("Castle (Map)", function()
-	local player = game.Player.LocalPlayer
+	local player = game.Players.LocalPlayer
 	player.Character.HumanoidRootPart.CFrame = CFrame.new(-180.366, 842.204, 268.373)
 end)
 local Button = Category:AddButton("Arctic Base (Map)", function()
 	local player = game.Players.LocalPlayer
 	player.Character.HumanoidRootPart.CFrame = CFrame.new(4117.27, 2177.42, -6759.89)
+end)
+local Button = Category:AddButton("House (Map)", function()
+	local player = game.Players.LocalPlayer
+	player.Character.HumanoidRootPart.CFrame = CFrame.new(2560.75, 2085.67, -4413.72)
 end)
 
 
