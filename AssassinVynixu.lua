@@ -2665,7 +2665,7 @@ local Button = Category:AddButton("Popsiclez - Aimbot", function()
 
 end)
 
-local Tab = Gui:AddTab("Kill")
+local Tab = Gui:AddTab("Killing")
 local Category = Tab:AddCategory("Killing Options")
 local Label = Category:AddLabel("You Must Manually Stab The User.")
 local Button = Category:AddButton("Kill Random", function()
