@@ -746,8 +746,5 @@ local Label = Category:AddLabel("This Script Is Still In Beta, There Are More Fe
 
 
 local Tab = Gui:AddTab("Patch Notes")
-local Category = Tab:AddCategory("1.4 Changes")
-local Label = Category:AddLabel("[+] 2 Stop Autofarming Methods")
-local Label = Category:AddLabel("[-] Old Stop Autofarming Method")
-local Label = Category:AddLabel("[+] New Patch Notes System")
-local Label = Category:AddLabel("[/] Better Stop Autofarming System Coming Soon.")
+local Category = Tab:AddCategory("1.5 Changes")
+local Label = Category:AddLabel("[-] Temporarily Disabled 'Disable Autofarm' ")
