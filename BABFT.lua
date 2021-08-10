@@ -14,7 +14,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
 
 local Gui = Library:AddGui({
-Title = {"Popsiclez", "BABFT V1.4"},
+Title = {"Popsiclez", "BABFT V1.5"},
 ThemeColor = Color3.fromRGB(34,139,34),
 ToggleKey = Enum.KeyCode.RightAlt,
 })
@@ -305,24 +305,8 @@ local Dropdown = Category:AddDropdown("Autofarm", {
     end
 
 end)
-local Button = Category:AddButton("Stop Autofarming (Rejoin Method)", function()
-    game:GetService("TeleportService"):Teleport(537413528)
-end)
-local Button = Category:AddButton("Stop Autofarming (Kill Method)", function()
-    game.Players.LocalPlayer.Character.Humanoid.Health = "0"
-    
 
-    wait(5)
 
-    game.Players.LocalPlayer.Character.Humanoid.Health = "0"
-    
-
-    wait(5)
-
-    game.Players.LocalPlayer.Character.Humanoid.Health = "0"
-    game.Workspace.Gravity = "196.2"
-end)
-local Label = Category:AddLabel("You may need to wait a little bit after using Kill Method")
 
 local Category = Tab:AddCategory("Go-Once Farming")
 local Dropdown = Category:AddDropdown("Go-Once", {
@@ -592,10 +576,7 @@ local Dropdown = Category:AddDropdown("Go-Once", {
     end
 
 end)
-local Button = Category:AddButton("Stop Farming", function()
-    game.Players.LocalPlayer.Character.Humanoid.Health = "0"
-    game.Workspace.Gravity = "196.2"
-end)
+
 
 local Tab = Gui:AddTab("Teleports")
 local Category = Tab:AddCategory("Teleport Locations")
