@@ -14,7 +14,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
 
 local Gui = Library:AddGui({
-Title = {"Popsiclez", "BABFT V1.8"},
+Title = {"Popsiclez", "BABFT V1.9"},
 ThemeColor = Color3.fromRGB(0,230,0),
 ToggleKey = Enum.KeyCode.RightAlt,
 })
