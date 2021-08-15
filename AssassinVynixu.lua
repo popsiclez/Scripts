@@ -6,10 +6,12 @@ ThemeColor = Color3.fromRGB(0,90,255),
 ToggleKey = Enum.KeyCode.RightAlt,
 })
 
+
+
 local Tab = Gui:AddTab("Softaim")
 local Category = Tab:AddCategory("Softaim Options")
 local Button = Category:AddButton("Enable Softaim", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/popsiclez/Scripts/main/popsiclezassassinsoftaim.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/bockatta/Atta/main/2'))()
 end)
 
 
@@ -2667,39 +2669,8 @@ end)
 
 local Tab = Gui:AddTab("Killing")
 local Category = Tab:AddCategory("Killing Options")
-local Label = Category:AddLabel("You Must Manually Stab The User.")
-local Button = Category:AddButton("Kill Random", function()
-	print("Killed Random User")
+local Label = Category:AddLabel("Temporarily disabled")
 
-	
-
-	game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	wait(0.09)
-        local randomPlayer = game.Players:GetPlayers()
-    [math.random(1,#game.Players:GetPlayers())]
-    
-	
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
-
-end)
-
-local Button = Category:AddButton("Loop Kill Random", function()
-
-	loopingkill = true --status
-
-	while loopingkill == true do
-
-	game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	wait(0.09)
-    local randomPlayer = game.Players:GetPlayers()
-    [math.random(1,#game.Players:GetPlayers())]
-    
-	
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
-	wait(0.1)
-	end
-
-end)
 
 local Tab = Gui:AddTab("Teleports")
 local Category = Tab:AddCategory("Teleport Locations")
@@ -2754,3 +2725,5 @@ local label = Category:AddLabel("Popsiclez - ESP By: Popsicle#5482")
 local label = Category:AddLabel("Softaim By: Popsicle#5482")
 local label = Category:AddLabel("Synapse ESP By: ic3wolf")
 local label = Category:AddLabel("UI lib by: Vynixu")
+
+
