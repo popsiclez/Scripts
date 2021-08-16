@@ -1,0 +1,36 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
+
+local Gui = Library:AddGui({
+Title = {"Popsiclez", "Broken Bones IV"},
+ThemeColor = Color3.fromRGB(0,90,255),
+ToggleKey = Enum.KeyCode.RightAlt,
+})
+
+
+
+local Tab = Gui:AddTab("Autofarm")
+local Category = Tab:AddCategory("Autofarm Options")
+local Button = Category:AddButton("Start Autofarm", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2207, 128, -374)
+    plr = game:GetService('Players').LocalPlayer
+    torso = plr.Character.UpperTorso
+    hum = plr.Character.Humanoid
+    mouse = plr:GetMouse()
+    stop = false
+    while stop == false do
+    local bp = Instance.new('BodyPosition')
+    bp.MaxForce = Vector3.new(999999,999999,999999)
+    bp.Position = torso.Position
+    bp.Parent = torso
+    local bav = Instance.new('BodyAngularVelocity')
+    bav.MaxTorque = Vector3.new(999999,999999,999999)
+    bav.AngularVelocity = Vector3.new(200,200,200)
+    bav.Parent = torso
+    wait()
+    end
+end)
+local Button = Category:AddButton("Stop Autofarm", function()
+    local player = game.Players.LocalPlayer.Name
+
+    game.workspace[player]:BreakJoints()
+end)
