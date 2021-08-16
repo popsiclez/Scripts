@@ -11,7 +11,7 @@ ToggleKey = Enum.KeyCode.RightAlt,
 local Tab = Gui:AddTab("Softaim")
 local Category = Tab:AddCategory("Softaim Options")
 local Button = Category:AddButton("Enable Softaim", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/bockatta/Atta/main/2'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/popsiclez/Scripts/main/popsiclezassassinsoftaim.lua'))()
 end)
 
 
