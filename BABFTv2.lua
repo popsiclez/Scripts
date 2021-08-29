@@ -133,8 +133,11 @@ ss:Toggle("Anti-AFK/Kick", function(toggle)
         antiafk = true
 
         while antiafk == true do
-            keypress(0x4A)
-            wait(10)
+            mousemoveabs(960,540)
+            wait(20000)
+            mousemoveabs(900,391)
+            wait(20000)
+            print("full while function completed")
         end
     else
         antiafk = false
@@ -259,4 +262,3 @@ ss:Label("1. New UI Library (Vep)")
 ss:Label("2. Temporarily Removed 'One Time Farming'")
 ss:Label("3. Removed 'Info' Tab")
 ss:Label("4. Script Rewritten")
-
