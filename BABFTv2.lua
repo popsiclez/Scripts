@@ -134,9 +134,9 @@ ss:Toggle("Anti-AFK/Kick", function(toggle)
 
         while antiafk == true do
             mousemoveabs(960,540)
-            wait(20000)
+            wait(20)
             mousemoveabs(900,391)
-            wait(20000)
+            wait(20)
             print("full while function completed")
         end
     else
