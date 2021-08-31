@@ -1,16 +1,10 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local Gui = Library:AddGui({
-Title = {"Popsiclez", "Broken Bones IV"},
-ThemeColor = Color3.fromRGB(0,90,255),
-ToggleKey = Enum.KeyCode.RightAlt,
-})
+local s = VLib:Window("Popsiclez - HUB", "BROKEN BONES", "P")
 
 
-
-local Tab = Gui:AddTab("Autofarm")
-local Category = Tab:AddCategory("Autofarm Options")
-local Button = Category:AddButton("Start Autofarm", function()
+local ss = s:Tab("Autofarm")
+ss:Button("Start Autofarm", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2207, 128, -374)
     plr = game:GetService('Players').LocalPlayer
     torso = plr.Character.UpperTorso
@@ -29,8 +23,10 @@ local Button = Category:AddButton("Start Autofarm", function()
     wait()
     end
 end)
-local Button = Category:AddButton("Stop Autofarm", function()
+ss:Button("Stop Autofarm", function()
     local player = game.Players.LocalPlayer.Name
 
     game.workspace[player]:BreakJoints()
 end)
+
+ss:Label("This Script Is Still In Development!")
