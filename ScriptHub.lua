@@ -23,6 +23,14 @@ local StarterGui = game:GetService("StarterGui")
 	
 		StarterGui:SetCore("SendNotification", {
 			Title = "Popsiclez - Script Hub";
-			Text = "Supported Game Not Found"
+			Text = "Supported Game Not Found!"
+		})
+else
+    local StarterGui = game:GetService("StarterGui")
+	
+		StarterGui:SetCore("SendNotification", {
+			Title = "Popsiclez - Script Hub";
+			Text = "Found Supported Game!"
 		})
 end
+
