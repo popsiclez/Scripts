@@ -1,5 +1,5 @@
 if workspace:FindFirstChild("Water") ~= nil then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/BABFTv2.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/BABFT.lua", true))()
 print("Game Found (BABFT)")
 end
 
