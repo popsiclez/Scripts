@@ -3,6 +3,7 @@ local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/
 local s = VLib:Window("Popsiclez - HUB", "BABFT SCRIPT", "P")
 
 autofarmtoggle = false
+fastmode = false
 
 local ss = s:Tab("Autofarm")
 
@@ -31,8 +32,15 @@ ss:Toggle("Autofarm", function(toggle)
         --Teleport #1 (Before 1st wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6211128, 168.550537, 1026.08252, -0.999319673, -0.00958876777, 0.0356116816, 1.58298041e-09, 0.965608895, 0.259998977, -0.0368800275, 0.2598221, -0.964951992)
-    
-        wait(3)
+            
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
+        
     
         
     
@@ -40,7 +48,13 @@ ss:Toggle("Autofarm", function(toggle)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6121, 74.7714, 1369.12)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Set Gravity Value
         game.Workspace.Gravity = "0"
@@ -51,55 +65,109 @@ ss:Toggle("Autofarm", function(toggle)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-85.5165, 68.4224, 2141.11)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #4 (3rd Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-76.7944, 44.242, 2909.81)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #5 (4th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-10.097, 37.56, 3678.82)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #6 (5th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.9972, 29.4043, 4450.4)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #7 (6th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.2731, 49.2683, 5219.17)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #8 (7th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-19.8785, 64.2691, 5988.73)
         
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #9 (8th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-5.29897, 43.7811, 6756.22)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #10 (9th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-75.1941, 43.5438, 7530.08)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #11 (10th Wall)
         local player = game.Players.LocalPlayer
         player.Character.HumanoidRootPart.CFrame = CFrame.new(-11.3333, 60.3145, 8295.05)
     
-        wait(3)
+        if fastmode == true then
+            wait(1)
+            print("applied FAST delay")
+        else
+            wait(3)
+            print("applied REGULAR delay")
+        end
     
         --Teleport #12 (Finish)
         local player = game.Players.LocalPlayer
@@ -127,6 +195,14 @@ ss:Toggle("Autofarm", function(toggle)
 
 end)
 
+ss:Toggle("Fast Mode",function(status)
+    if status == true then
+        fastmode = true
+    else
+        fastmode = false;
+    end
+end)
+
 antiafk = false
 ss:Toggle("Anti-AFK/Kick", function(toggle)
     if toggle == true then
@@ -143,6 +219,271 @@ ss:Toggle("Anti-AFK/Kick", function(toggle)
         end
     else
         antiafk = false
+    end
+end)
+
+ss:Label("-------------------------------------------------------------------------------")
+
+ss:Dropdown("Go-Once Farming",{"Slow Speed (More Gold)", "Medium Speed", "Fast Speed (Less Gold)"},function(name)
+    if name == "Slow Speed (More Gold)" then
+        
+        
+
+        
+        
+
+
+        --Set Gravity Value
+        game.Workspace.Gravity = "0"
+
+        --Teleport #1 (Before 1st wall)
+        local player = game.Players.LocalPlayer
+	    player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6211128, 168.550537, 1026.08252, -0.999319673, -0.00958876777, 0.0356116816, 1.58298041e-09, 0.965608895, 0.259998977, -0.0368800275, 0.2598221, -0.964951992)
+
+        wait(5)
+
+        --Teleport #2 (1st Wall)
+        local player = game.Players.LocalPlayer
+	    player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6121, 74.7714, 1369.12)
+
+        wait(5)
+
+        --Teleport #3 (2st Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-85.5165, 68.4224, 2141.11)
+
+        wait(5)
+
+        --Teleport #4 (3rd Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-76.7944, 44.242, 2909.81)
+
+        wait(5)
+
+        --Teleport #5 (4th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-10.097, 37.56, 3678.82)
+
+        wait(5)
+
+        --Teleport #6 (5th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.9972, 29.4043, 4450.4)
+
+        wait(5)
+
+        --Teleport #7 (6th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.2731, 49.2683, 5219.17)
+
+        wait(5)
+
+        --Teleport #8 (7th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-19.8785, 64.2691, 5988.73)
+        
+        wait(5)
+
+        --Teleport #9 (8th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-5.29897, 43.7811, 6756.22)
+
+        wait(5)
+
+        --Teleport #10 (9th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-75.1941, 43.5438, 7530.08)
+
+        wait(5)
+
+        --Teleport #11 (10th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-11.3333, 60.3145, 8295.05)
+
+        wait(5)
+
+        --Teleport #12 (Finish)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-56.8106, -340.512, 9488)
+
+        wait(5)
+
+        game.Workspace.Gravity = "196.2"
+    
+        
+
+    
+    end
+
+    if name == "Medium Speed" then
+        
+        
+        --Set Gravity Value
+        game.Workspace.Gravity = "0"
+
+        --Teleport #1 (Before 1st wall)
+        local player = game.Players.LocalPlayer
+	    player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6211128, 168.550537, 1026.08252, -0.999319673, -0.00958876777, 0.0356116816, 1.58298041e-09, 0.965608895, 0.259998977, -0.0368800275, 0.2598221, -0.964951992)
+
+        wait(3)
+
+        --Teleport #2 (1st Wall)
+        local player = game.Players.LocalPlayer
+	    player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6121, 74.7714, 1369.12)
+
+        wait(3)
+
+        --Teleport #3 (2st Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-85.5165, 68.4224, 2141.11)
+
+        wait(3)
+
+        --Teleport #4 (3rd Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-76.7944, 44.242, 2909.81)
+
+        wait(3)
+
+        --Teleport #5 (4th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-10.097, 37.56, 3678.82)
+
+        wait(3)
+
+        --Teleport #6 (5th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.9972, 29.4043, 4450.4)
+
+        wait(3)
+
+        --Teleport #7 (6th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.2731, 49.2683, 5219.17)
+
+        wait(3)
+
+        --Teleport #8 (7th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-19.8785, 64.2691, 5988.73)
+        
+        wait(3)
+
+        --Teleport #9 (8th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-5.29897, 43.7811, 6756.22)
+
+        wait(3)
+
+        --Teleport #10 (9th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-75.1941, 43.5438, 7530.08)
+
+        wait(3)
+
+        --Teleport #11 (10th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-11.3333, 60.3145, 8295.05)
+
+        wait(3)
+
+        --Teleport #12 (Finish)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-56.8106, -340.512, 9488)
+
+        wait(5)
+
+        game.Workspace.Gravity = "196.2"
+    
+        
+
+        
+    end
+
+    if name == "Fast Speed (Less Gold)" then
+
+        
+        game.Workspace.Gravity = "0"
+
+        --Teleport #1 (Before 1st wall)
+        local player = game.Players.LocalPlayer
+	    player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6211128, 168.550537, 1026.08252, -0.999319673, -0.00958876777, 0.0356116816, 1.58298041e-09, 0.965608895, 0.259998977, -0.0368800275, 0.2598221, -0.964951992)
+
+        wait(1)
+
+        --Teleport #2 (1st Wall)
+        local player = game.Players.LocalPlayer
+	    player.Character.HumanoidRootPart.CFrame = CFrame.new(-51.6121, 74.7714, 1369.12)
+
+        wait(1)
+
+        --Teleport #3 (2st Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-85.5165, 68.4224, 2141.11)
+
+        wait(1)
+
+        --Teleport #4 (3rd Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-76.7944, 44.242, 2909.81)
+
+        wait(1)
+
+        --Teleport #5 (4th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-10.097, 37.56, 3678.82)
+
+        wait(1)
+
+        --Teleport #6 (5th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.9972, 29.4043, 4450.4)
+
+        wait(1)
+
+        --Teleport #7 (6th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-36.2731, 49.2683, 5219.17)
+
+        wait(1)
+
+        --Teleport #8 (7th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-19.8785, 64.2691, 5988.73)
+        
+        wait(1)
+
+        --Teleport #9 (8th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-5.29897, 43.7811, 6756.22)
+
+        wait(1)
+
+        --Teleport #10 (9th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-75.1941, 43.5438, 7530.08)
+
+        wait(1)
+
+        --Teleport #11 (10th Wall)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-11.3333, 60.3145, 8295.05)
+
+        wait(1)
+
+        --Teleport #12 (Finish)
+        local player = game.Players.LocalPlayer
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(-56.8106, -340.512, 9488)
+
+        wait(5)
+
+        game.Workspace.Gravity = "196.2"
+    
+        wait(15)
+        print("Finished Run")
+
+
+        
     end
 end)
 
@@ -257,12 +598,12 @@ ss:Button("Noclip",function()
 		})
 end)
 
-local ss = s:Tab("Releases")
+
 local ss = s:Tab("Patch Notes")
 
-ss:Label("Version 2.0 Changes")
-ss:Label("1. New UI Library (Vep)")
-ss:Label("2. Temporarily Removed 'One Time Farming'")
-ss:Label("3. Removed 'Info' Tab")
-ss:Label("4. Script Rewritten")
-ss:Label("5. Rewrote Anti-AFK")
+ss:Label("Version 2.1 Changes")
+ss:Label("1. Added Back 'Go-Once Farming'")
+ss:Label("2. Fixed Autofarm Bugs")
+ss:Label("3. Removed Testing Tab 'Releases'")
+ss:Label("4. Added Separator On 'Autofarm' Tab For Design Purposes")
+ss:Label("5. Added 'Fast Speed' Toggle For Autofarm")
