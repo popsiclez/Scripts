@@ -135,6 +135,8 @@ ss:Toggle("Anti-AFK/Kick", function(toggle)
         while antiafk == true do
             mousemoveabs(960,540)
             wait(20)
+            mouse1click()
+            wait(20)
             mousemoveabs(900,391)
             wait(20)
             print("full while function completed")
@@ -255,6 +257,7 @@ ss:Button("Noclip",function()
 		})
 end)
 
+local ss = s:Tab("Releases")
 local ss = s:Tab("Patch Notes")
 
 ss:Label("Version 2.0 Changes")
