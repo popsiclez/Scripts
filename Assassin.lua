@@ -1,6 +1,6 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local s = VLib:Window("Popsiclez", "ASSASSIN SCRIPT", "P")
+local s = VLib:Window("Popsiclez - HUB", "ASSASSIN SCRIPT", "P")
 
 autofarmtoggle = false
 
