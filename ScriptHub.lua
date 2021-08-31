@@ -4,7 +4,7 @@ print("Game Found (BABFT)")
 end
 
 if workspace:FindFirstChild("FountainKnife") ~= nil then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/AssassinVynixu.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/Assassin.lua", true))()
 print("Game Found (Assassin)") 
 end
 
