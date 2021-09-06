@@ -1,32 +1,112 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local s = VLib:Window("Popsiclez - HUB", "BROKEN BONES", "P")
-
+local s = VLib:Window("Popsiclez - HUB", "BROKEN BONES", "V1.1")
 
 local ss = s:Tab("Autofarm")
-ss:Button("Start Autofarm", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2207, 128, -374)
-    plr = game:GetService('Players').LocalPlayer
-    torso = plr.Character.UpperTorso
-    hum = plr.Character.Humanoid
-    mouse = plr:GetMouse()
-    stop = false
-    while stop == false do
-    local bp = Instance.new('BodyPosition')
-    bp.MaxForce = Vector3.new(999999,999999,999999)
-    bp.Position = torso.Position
-    bp.Parent = torso
-    local bav = Instance.new('BodyAngularVelocity')
-    bav.MaxTorque = Vector3.new(999999,999999,999999)
-    bav.AngularVelocity = Vector3.new(200,200,200)
-    bav.Parent = torso
-    wait()
+
+ss:Toggle("Autofarm", function(toggle)
+    if toggle == true then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2207, 128, -374)
+        plr = game:GetService('Players').LocalPlayer
+        torso = plr.Character.UpperTorso
+        hum = plr.Character.Humanoid
+        mouse = plr:GetMouse()
+        stop = false
+        while stop == false do
+        local bp = Instance.new('BodyPosition')
+        bp.MaxForce = Vector3.new(999999,999999,999999)
+        bp.Position = torso.Position
+        bp.Parent = torso
+        local bav = Instance.new('BodyAngularVelocity')
+        bav.MaxTorque = Vector3.new(999999,999999,999999)
+        bav.AngularVelocity = Vector3.new(200,200,200)
+        bav.Parent = torso
+        wait()
+        end
+    else 
+        local player = game.Players.LocalPlayer.Name
+
+        game.workspace[player]:BreakJoints()
     end
 end)
-ss:Button("Stop Autofarm", function()
-    local player = game.Players.LocalPlayer.Name
 
-    game.workspace[player]:BreakJoints()
+local ss = s:Tab("Miscellaneous")
+
+
+ss:Textbox("FOV Value", true,function(str)
+game.Workspace.Camera.FieldOfView = str
 end)
 
-ss:Label("This Script Is Still In Development!")
+ss:Textbox("Speed Value", true,function(str)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = str
+end)
+
+ss:Textbox("Gravity Value", true,function(str)
+	 game.Workspace.Gravity = str
+end)
+
+ss:Button("Reset Speed/Gravity/FOV",function()
+  game.Workspace.Camera.FieldOfView = "70"
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "16"
+    game.Workspace.Gravity = "196.2"
+end)
+
+
+
+ss:Button("Suicide",function()
+ game.Players.LocalPlayer.Character.Humanoid.Health = "0"
+end)
+
+ss:Button("Infinite Jump",function()
+   InfiniteJumpEnabled = true
+		game:GetService("UserInputService").JumpRequest:connect(function()
+			if InfiniteJumpEnabled then
+				game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+			end
+		end)
+end)
+ss:Button("Rejoin Server", function()
+    local ts = game:GetService("TeleportService")
+
+    local p = game:GetService("Players").LocalPlayer
+    
+     
+    
+    ts:Teleport(game.PlaceId, p)
+end)
+
+ss:Button("Noclip",function()
+  noclip = false
+		game:GetService('RunService').Stepped:connect(function()
+			if noclip then
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end
+		end)
+		plr = game.Players.LocalPlayer
+		mouse = plr:GetMouse()
+		mouse.KeyDown:connect(function(key)
+	
+			if key == "e" then
+				noclip = not noclip
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end
+		end)
+		print('Loaded')
+		print('Press "E" to noclip')
+	
+		local StarterGui = game:GetService("StarterGui")
+	
+		StarterGui:SetCore("SendNotification", {
+			Title = "Popsiclez - Broken Bones IV";
+			Text = "Press E To Toggle Noclip"
+		})
+end)
+
+local ss = s:Tab("Patch Notes")
+ss:Label("Version 1.1 Changes")
+ss:Label("1. Turned Autofarm into a toggle")
+ss:Label("2. Added Misc tab + Misc features")
+
+
+
+
