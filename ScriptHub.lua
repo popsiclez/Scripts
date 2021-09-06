@@ -19,12 +19,27 @@ foundgame = true
 end
 
 if foundgame == false then
-local StarterGui = game:GetService("StarterGui")
-	
-		StarterGui:SetCore("SendNotification", {
-			Title = "Popsiclez - Script Hub";
-			Text = "Supported Game Not Found!"
-		})
+
+    function NotificationCallback(text)
+        if text == "Yes" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/MiscScript.lua", true))()
+        else
+            print("Pressed No Button")
+        end
+    end
+    
+    local callback = Instance.new("BindableFunction",script)
+    callback.OnInvoke = NotificationCallback
+    
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Popsiclez - Script Hub";
+        Text = "Seems like we couldnt find a valid game, execute misc script?";
+        Duration = 9999999;
+        Callback = callback;
+        Button1 = "Yes";
+        Button2 = "No"
+    })
+		
 else
     local StarterGui = game:GetService("StarterGui")
 	
@@ -33,4 +48,3 @@ else
 			Text = "Found Supported Game!"
 		})
 end
-
