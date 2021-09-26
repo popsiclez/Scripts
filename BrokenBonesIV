@@ -1,6 +1,6 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
-local s = VLib:Window("Popsiclez - HUB", "BROKEN BONES", "V1.1")
+local s = VLib:Window("Popsiclez - HUB", "BROKEN BONES", "V1.2")
 
 local ss = s:Tab("Autofarm")
 
@@ -27,6 +27,25 @@ ss:Toggle("Autofarm", function(toggle)
         local player = game.Players.LocalPlayer.Name
 
         game.workspace[player]:BreakJoints()
+    end
+end)
+
+antiafk = false
+ss:Toggle("Anti-AFK/Kick", function(toggle)
+    if toggle == true then
+        antiafk = true
+
+        while antiafk == true do
+            mousemoveabs(960,540)
+            wait(20)
+            mouse1click()
+            wait(20)
+            mousemoveabs(900,391)
+            wait(20)
+            print("full while function completed")
+        end
+    else
+        antiafk = false
     end
 end)
 
