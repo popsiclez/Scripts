@@ -3,7 +3,7 @@
     
     game.StarterGui:SetCore("SendNotification", {
         Title = "Popsiclez - Da Hood Aimlock";
-        Text = "Aimlock by Popsicle#1234 | FOV System by Stefanuk. Toggle: Y";
+        Text = "Aimlock by Popsicle#1234 | FOV From Synapse Drawing Lib | Toggle: Y";
         Duration = 9999999;
         Callback = callback;
    })
