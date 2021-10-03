@@ -1,9 +1,12 @@
-local StarterGui = game:GetService("StarterGui")
-	
-    StarterGui:SetCore("SendNotification", {
-        Title = "Popsiclez - DAHOOD";
-        Text = "Setting Up Aimlock. Toggle Key: Y"
-    })
+    local callback = Instance.new("BindableFunction",script)
+    callback.OnInvoke = NotificationCallback
+    
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Popsiclez - Da Hood Aimlock";
+        Text = "Aimlock by Popsicle#1234 | FOV System by Stefanuk. Toggle: Y";
+        Duration = 9999999;
+        Callback = callback;
+   })
 
 -- // Dependencies
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/file.lua"))()
