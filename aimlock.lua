@@ -1,5 +1,5 @@
 -- // Dependencies
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/Module.lua"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/file.lua"))()
 Aiming.TeamCheck(false)
 
 -- // Services
@@ -17,7 +17,7 @@ local DaHoodSettings = {
     SilentAim = true,
     AimLock = true,
     Prediction = 0.165,
-    AimLockKeybind = Enum.KeyCode.E
+    AimLockKeybind = Enum.KeyCode.Y
 }
 getgenv().DaHoodSettings = DaHoodSettings
 
