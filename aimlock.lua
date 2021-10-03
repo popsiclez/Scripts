@@ -1,3 +1,10 @@
+local StarterGui = game:GetService("StarterGui")
+	
+    StarterGui:SetCore("SendNotification", {
+        Title = "Popsiclez - DAHOOD";
+        Text = "Setting Up Aimlock. Toggle Key: Y"
+    })
+
 -- // Dependencies
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/file.lua"))()
 Aiming.TeamCheck(false)
