@@ -6,6 +6,12 @@ print("Game Found (BABFT)")
 foundgame = true
 end
 
+if workspace:FindFirstChild("Cashiers") ~= nil then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/DaHood.lua", true))()
+print("Game Found (DAHOOD)")
+foundgame = true
+end
+
 if workspace:FindFirstChild("FountainKnife") ~= nil then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/Assassin.lua", true))()
 print("Game Found (Assassin)")
