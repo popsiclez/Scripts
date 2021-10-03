@@ -9,7 +9,7 @@
    })
 
 -- // Dependencies
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/file.lua"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/aimlocksettings.lua"))()
 Aiming.TeamCheck(false)
 
 -- // Services
