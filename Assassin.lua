@@ -43,6 +43,145 @@ Section:NewButton("Reset Values Above", "Sets FOV,Gravity, WalkSpeed to default.
     game.Workspace.Gravity = "196.2"
 end)
 
+Section:NewButton("FPS Boost", "Deletes some decals/meshes to increase FPS.", function()
+    local Decals = function()
+        local decalsyeeted = true
+        local w = game:GetService("Workspace")
+        local l = game:GetService("Lighting")
+        local t = w.Terrain
+        sethiddenproperty(l,"Technology",2)
+        sethiddenproperty(t,"Decoration",false)
+        t.WaterWaveSize = 0
+        t.WaterWaveSpeed = 0
+        t.WaterReflectance = 0
+        t.WaterTransparency = 0
+        l.GlobalShadows = 0
+        l.FogEnd = 9e9
+        l.Brightness = 0
+        settings().Rendering.QualityLevel = "Level01"
+        for i, v in pairs(w:GetDescendants()) do
+            pcall(function()
+                if v:IsA("BasePart") and not v:IsA("MeshPart") then
+                    v.Material = "Plastic"
+                    v.Reflectance = 0
+                elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
+                    v.Transparency = 1
+                elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+                    v.Lifetime = NumberRange.new(0)
+                elseif v:IsA("Explosion") then
+                    v.BlastPressure = 1
+                    v.BlastRadius = 1
+                elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+                    v.Enabled = false
+                elseif v:IsA("MeshPart") and decalsyeeted then
+                    v.Material = "Plastic"
+                    v.Reflectance = 0
+                    v.TextureID = 10385902758728957
+                elseif v:IsA("SpecialMesh") and decalsyeeted  then
+                    v.TextureId=0
+                elseif v:IsA("ShirtGraphic") and decalsyeeted then
+                    v.Graphic=0
+                elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+                    v[v.ClassName.."Template"]=0
+                end
+            end)
+        end
+        for i = 1,#l:GetChildren() do
+            e=l:GetChildren()[i]
+            pcall(function()
+                if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+                    e.Enabled = false
+                end
+            end)
+        end
+        w.DescendantAdded:Connect(function(v)
+            pcall(function()
+                wait()
+                if v:IsA("BasePart") and not v:IsA("MeshPart") then
+                    v.Material = "Plastic"
+                    v.Reflectance = 0
+                elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+                    v.Transparency = 1
+                elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+                    v.Lifetime = NumberRange.new(0)
+                elseif v:IsA("Explosion") then
+                    v.BlastPressure = 1
+                    v.BlastRadius = 1
+                elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+                    v.Enabled = false
+                elseif v:IsA("MeshPart") and decalsyeeted then
+                    v.Material = "Plastic"
+                    v.Reflectance = 0
+                    v.TextureID = 10385902758728957
+                elseif v:IsA("SpecialMesh") and decalsyeeted then
+                    v.TextureId=0
+                elseif v:IsA("ShirtGraphic") and decalsyeeted then
+                    v.ShirtGraphic=0
+                elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+                    v[v.ClassName.."Template"]=0
+                end
+            end)
+        end)
+    end
+    
+    local Render_Yes = function()
+        local decalsyeeted = true
+    
+        for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+            pcall(function()
+                if v.Material then
+                    v.Material = "Plastic"
+                elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+                    v.Transparency = 1
+                elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+                    v.Lifetime = NumberRange.new(0)
+                elseif v:IsA("Explosion") then
+                    v.BlastPressure = 1
+                    v.BlastRadius = 1
+                elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+                    v.Enabled = false
+                elseif v:IsA("MeshPart") and decalsyeeted then
+                    v.Material = "Plastic"
+                    v.Reflectance = 0
+                    v.TextureID = 10385902758728957
+                elseif v:IsA("SpecialMesh") and decalsyeeted then
+                    v.TextureId=0
+                elseif v:IsA("ShirtGraphic") and decalsyeeted then
+                    v.ShirtGraphic=0
+                elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+                    v[v.ClassName.."Template"]=0
+                end
+            end)
+        end
+    end
+    
+    local FpsBoost = function()
+        Decals()
+        Render_Yes()
+    end
+    
+    function onChatted(msg, recipient, speaker)
+        local source = string.lower(speaker.Name)
+        msg = string.lower(msg)
+        if string.sub(msg,1,6) == "/e fps" then
+            FpsBoost()
+        end
+    end
+        
+    function onPlayerEntered(newPlayer)
+        newPlayer.Chatted:connect(function(msg, recipient) onChatted(msg, recipient, newPlayer) end)
+    end
+        
+    game.Players.ChildAdded:connect(onPlayerEntered)
+        local p = game.Players:GetChildren()
+        for i = 1, #p do
+        p[i].Chatted:connect(function(msg, recipient) onChatted(msg, recipient, p[i]) end)
+    end
+
+    FpsBoost()
+
+end)
+
 Section:NewButton("Kill LocalPlayer", "Sets HP to 0; resets character.", function()
    game.Players.LocalPlayer.Character.Humanoid.Health = "0"
 end)
@@ -100,7 +239,12 @@ end)
 
 local Tab = Window:NewTab("Autofarm")
 
-local Section = Tab:NewSection("Autofarm Options")
+local Section = Tab:NewSection("Autofarm")
+Section:NewButton("Noclip Script", "When on, allows you to walk through walls.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/popsiclez/Scripts/main/popsiclezassassinsoftaim.lua'))()
 
-Section:NewLabel("Temporarily disabled for rewrite.")
+    while wait() do 
+        game:GetService("Players").hellobyeok0.Backpack.Knife:Destroy()
+    end
+  end)
 
