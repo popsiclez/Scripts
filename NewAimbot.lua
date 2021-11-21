@@ -19,7 +19,7 @@ local TextButton_7 = Instance.new("TextButton")
 --Properties:
 
 Aimbot.Name = "Aimbot"
-Aimbot.Parent = game.Workspace
+Aimbot.Parent = game.CoreGui
 Aimbot.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = Aimbot
