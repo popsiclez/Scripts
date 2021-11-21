@@ -1,4 +1,3 @@
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -15,11 +14,12 @@ local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
 local t3_2 = Instance.new("TextLabel")
+local TextButton_7 = Instance.new("TextButton")
 
 --Properties:
 
 Aimbot.Name = "Aimbot"
-Aimbot.Parent = game.CoreGui
+Aimbot.Parent = game.Workspace
 Aimbot.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = Aimbot
@@ -39,8 +39,8 @@ Top.Size = UDim2.new(0, 246, 0, 37)
 
 t3.Name = "t3"
 t3.Parent = Top
-t3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-t3.BackgroundTransparency = 1.000
+t3.BackgroundColor3 = Color3.fromRGB(100, 150, 0)
+t3.BorderSizePixel = 0
 t3.Position = UDim2.new(0, 0, -0.00521067018, 0)
 t3.Size = UDim2.new(0, 246, 0, 37)
 t3.Font = Enum.Font.SourceSansBold
@@ -79,7 +79,7 @@ TextButton_3.BorderSizePixel = 0
 TextButton_3.Position = UDim2.new(0, 0, 0.344206095, 0)
 TextButton_3.Size = UDim2.new(0, 246, 0, 26)
 TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = "Destroy GUI (Also disables aimbot)"
+TextButton_3.Text = "Destroy GUI "
 TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.TextSize = 14.000
 
@@ -129,9 +129,20 @@ t3_2.TextScaled = true
 t3_2.TextSize = 20.000
 t3_2.TextWrapped = true
 
+TextButton_7.Parent = Frame
+TextButton_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.BackgroundTransparency = 0.800
+TextButton_7.BorderSizePixel = 0
+TextButton_7.Position = UDim2.new(0, 0, 0.748425722, 0)
+TextButton_7.Size = UDim2.new(0, 246, 0, 26)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "Killer Mode (Testing)"
+TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.TextSize = 14.000
+
 -- Scripts:
 
-local function OWYKJ_fake_script() -- TextButton.LocalScript 
+local function WBZFYG_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local Button = script.Parent
@@ -149,8 +160,8 @@ local function OWYKJ_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OWYKJ_fake_script)()
-local function HNRXT_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(WBZFYG_fake_script)()
+local function CVTAVV_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local Button = script.Parent
@@ -162,8 +173,8 @@ local function HNRXT_fake_script() -- TextButton_2.LocalScript
 		loadstring(game:HttpGet("https://pastebin.com/raw/TXmPTmdq"))()	
 	end)
 end
-coroutine.wrap(HNRXT_fake_script)()
-local function GMJIBZA_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(CVTAVV_fake_script)()
+local function ALCNNR_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	local Button = script.Parent
@@ -174,8 +185,8 @@ local function GMJIBZA_fake_script() -- TextButton_3.LocalScript
 		destrtarg:Destroy()
 	end)
 end
-coroutine.wrap(GMJIBZA_fake_script)()
-local function VGWCIJD_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(ALCNNR_fake_script)()
+local function CCMDQP_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	local Button = script.Parent
@@ -193,8 +204,8 @@ local function VGWCIJD_fake_script() -- TextButton_4.LocalScript
 	
 	end)
 end
-coroutine.wrap(VGWCIJD_fake_script)()
-local function IAYFT_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(CCMDQP_fake_script)()
+local function AFTS_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	local Button = script.Parent
@@ -207,8 +218,8 @@ local function IAYFT_fake_script() -- TextButton_5.LocalScript
 		destrtarg:Destroy()
 	end)
 end
-coroutine.wrap(IAYFT_fake_script)()
-local function DFPHL_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(AFTS_fake_script)()
+local function REBTS_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	local Button = script.Parent
@@ -219,8 +230,8 @@ local function DFPHL_fake_script() -- TextButton_6.LocalScript
 	
 	end)
 end
-coroutine.wrap(DFPHL_fake_script)()
-local function RWJPA_fake_script() -- Frame.LocalScript 
+coroutine.wrap(REBTS_fake_script)()
+local function DEGA_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -263,8 +274,8 @@ local function RWJPA_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RWJPA_fake_script)()
-local function MWOZDKD_fake_script() -- Frame.LocalScript 
+coroutine.wrap(DEGA_fake_script)()
+local function FSDG_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local FrameObject = script.Parent
@@ -282,4 +293,33 @@ local function MWOZDKD_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MWOZDKD_fake_script)()
+coroutine.wrap(FSDG_fake_script)()
+local function QUTF_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	local Button = script.Parent
+	
+	
+	Button.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
+		local localPlayer = game:GetService("Players").LocalPlayer
+	
+		local Destroy_Unnecessary_Things = function()
+			for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+				if v:IsA("Part") or v:IsA("WedgePart") or v:IsA("MeshPart") or v:IsA("UnionPart") or v:IsA("UnionOperation") or v:IsA("TrussPart") or v:IsA("VehicleSeat") then
+					if v.Parent:FindFirstChild("Humanoid") or v.Parent:FindFirstChild("HumanoidRootPart") then
+						local ab = 1 + 1
+					else
+						v:Destroy()
+					end
+				end
+			end
+		end
+	
+		pcall(function()Destroy_Unnecessary_Things()
+		end)
+		game.Workspace.Gravity = "0"
+	end)
+end
+coroutine.wrap(QUTF_fake_script)()
