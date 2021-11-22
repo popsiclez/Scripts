@@ -1,31 +1,34 @@
+
 foundgame = false
-
-if workspace:FindFirstChild("Water") ~= nil then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/BABFT.lua", true))()
-print("Game Found (BABFT)")
-foundgame = true
+print("Checking")
+if game.PlaceId == "4282985734" then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/CombatWarriors.lua", true))()
+    foundgame = true
 end
 
-if workspace:FindFirstChild("Cashiers") ~= nil then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/DaHood.lua", true))()
-print("Game Found (DAHOOD)")
-foundgame = true
+if game.PlaceId == "537413528" then 
+    loadstring(game:HttpGet("https://github.com/popsiclez/Scripts/raw/main/BABFT.lua", true))()
+    foundgame = true
 end
 
-if workspace:FindFirstChild("FountainKnife") ~= nil then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/Assassin.lua", true))()
-print("Game Found (Assassin)")
-foundgame = true
+if game.PlaceId == "379614936" then 
+    loadstring(game:HttpGet("https://github.com/popsiclez/Scripts/raw/main/Assassin.lua", true))()
+    foundgame = true
 end
 
-if workspace:FindFirstChild("DeadTree") ~= nil then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/BrokenBonesIV", true))()
-print("Game Found (Broken Bones IV")
-foundgame = true
+if game.PlaceId == "2788229376" then 
+    loadstring(game:HttpGet("https://github.com/popsiclez/Scripts/raw/main/DaHood.lua", true))()
+    foundgame = true
 end
+
+if game.PlaceId == "2551991523" then 
+    loadstring(game:HttpGet("https://github.com/popsiclez/Scripts/raw/main/BrokenBonesIV", true))()
+    foundgame = true
+end
+
+print("done Checking")
 
 if foundgame == false then
-
     function NotificationCallback(text)
         if text == "Yes" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/popsiclez/Scripts/main/MiscScript.lua", true))()
@@ -45,12 +48,13 @@ if foundgame == false then
         Button1 = "Yes";
         Button2 = "No"
     })
-		
-else
-    local StarterGui = game:GetService("StarterGui")
+    
+   else
+        local StarterGui = game:GetService("StarterGui")
 	
 		StarterGui:SetCore("SendNotification", {
 			Title = "Popsiclez - Script Hub";
 			Text = "Found Supported Game!"
 		})
 end
+
